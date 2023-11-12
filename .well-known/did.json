@@ -1,85 +1,61 @@
 {
-  "did": "did:web:anedpurp.github.io", 
-  "localMetadata": {
-    "keys": [
-      {
-        "kmsKeyId": "88ae08dc-d0ea-4f65-b1ec-0e2798875381",
-        "didDocumentKeyId": "did:web:anedpurp.github.io#z12L6EPw"
-      }, 
-      {
-        "kmsKeyId": "cbd6c08b-67e7-4bd0-93c1-fd70ad85a5f5",
-        "didDocumentKeyId": "did:web:anedpurp.github.io#2MxJiNBTwD"
-      },
-      {
-        "kmsKeyId": "aedfe37c-76e5-40b1-b816-efac66e3e38e",
-        "didDocumentKeyId": "did:web:anedpurp.github.io#u8uuCt7Yik"
-      },
-      {
-        "kmsKeyId": "dd573e84-bf15-421c-8737-920a7655a24f",
-        "didDocumentKeyId": "did:web:anedpurp.github.io#8uyPVpV2mq"
+  "@context": [
+    "https://w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/x25519-2019/v1",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://w3id.org/security/suites/ed25519-2018/v1",
+    "https://w3id.org/security/bbs/v1"
+  ], 
+  "id": "did:web:anedpurp.github.io",
+  "authentication": [
+    "did:web:anedpurp.github.io#2MxJiNBTwD"
+  ],
+  "assertionMethod": [
+    "did:web:anedpurp.github.io#z12L6EPw",
+    "did:web:anedpurp.github.io#2MxJiNBTwD",
+    "did:web:anedpurp.github.io#u8uuCt7Yik"
+  ],
+  "capabilityDelegation": [
+    "did:web:anedpurp.github.io#z12L6EPw",
+    "did:web:anedpurp.github.io#2MxJiNBTwD",
+    "did:web:anedpurp.github.io#u8uuCt7Yik"
+  ], 
+  "capabilityInvocation": [
+    "did:web:anedpurp.github.io#z12L6EPw",
+    "did:web:anedpurp.github.io#2MxJiNBTwD",
+    "did:web:anedpurp.github.io#u8uuCt7Yik"
+  ],
+  "verificationMethod": [
+    {
+      "id": "did:web:anedpurp.github.io#z12L6EPw",
+      "controller": "did:web:anedpurp.github.io",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "P-256",
+        "x": "gjq8bL2xzOCMgmBXGaC8oznM3TkmL2ElhqTVGEl020k",
+        "y": "_j0rYTRSdYt3FYBYT2-kyIvY1E326KyOFJ4wPg5dTKs"
       }
-    ], 
-    "registered": 1698931588455,
-    "initialDidDocument": {
-      "id": "did:web:anedpurp.github.io",
-      "@context": [
-        "https://w3.org/ns/did/v1",
-        "https://w3id.org/security/suites/x25519-2019/v1",
-        "https://w3id.org/security/suites/jws-2020/v1",
-        "https://w3id.org/security/suites/ed25519-2018/v1",
-        "https://w3id.org/security/bbs/v1"
-      ],
-      "keyAgreement": [
-        {
-          "id": "did:web:anedpurp.github.io#8uyPVpV2mq", 
-          "type": "X25519KeyAgreementKey2019",
-          "controller": "did:web:anedpurp.github.io",
-          "publicKeyBase58": "8uyPVpV2mq6PgCSF3FLbkWfFyg1hyvptfKbnCUwu7cXx"
-        }
-      ],
-      "authentication": [
-        "did:web:anedpurp.github.io#2MxJiNBTwD"
-      ],
-      "assertionMethod": [
-        "did:web:anedpurp.github.io#z12L6EPw",
-        "did:web:anedpurp.github.io#2MxJiNBTwD",
-        "did:web:anedpurp.github.io#u8uuCt7Yik"
-      ],
-      "verificationMethod": [
-        {
-          "id": "did:web:anedpurp.github.io#z12L6EPw",
-          "type": "JsonWebKey2020",
-          "controller": "did:web:anedpurp.github.io",
-          "publicKeyJwk": {
-          "x": "gjq8bL2xzOCMgmBXGaC8oznM3TkmL2ElhqTVGEl020k",
-          "y": "_j0rYTRSdYt3FYBYT2-kyIvY1E326KyOFJ4wPg5dTKs", 
-          "crv": "P-256", 
-          "kty": "EC"
-          }
-        },
-        {
-          "id": "did:web:anedpurp.github.io#2MxJiNBTwD",
-          "type": "Ed25519VerificationKey2018", 
-          "controller": "did:web:anedpurp.github.io", 
-          "publicKeyBase58": "2MxJiNBTwDpRcPDYMzAJstEr4UNvbdixzs7YS1dkLhZ8"
-        },
-        {
-          "id": "did:web:anedpurp.github.io#u8uuCt7Yik",
-          "type": "Bls12381G2Key2020",
-          "controller": "did:web:anedpurp.github.io",
-          "publicKeyBase58": "u8uuCt7YikshGgmKozMm84T5ebnUdQ3yVhYLVcVUkJu4ryiHHngzDzoURbh2fqsiDLPeLJqSZzSKDHjUt5a6V5k7RTbzp1qsvSfsBqYmSGCJrp8T5sES4mePpbxBhM7mKCk"
-        }
-      ],
-      "capabilityDelegation": [
-        "did:web:anedpurp.github.io#z12L6EPw",
-        "did:web:anedpurp.github.io#2MxJiNBTwD",
-        "did:web:anedpurp.github.io#u8uuCt7Yik"
-      ],
-      "capabilityInvocation": [
-        "did:web:anedpurp.github.io#z12L6EPw",
-        "did:web:anedpurp.github.io#2MxJiNBTwD",
-        "did:web:anedpurp.github.io#u8uuCt7Yik"
-      ]
+    },
+    {
+      "id": "did:web:anedpurp.github.io#2MxJiNBTwD",
+      "controller": "did:web:anedpurp.github.io",
+      "type": "Ed25519VerificationKey2018",
+      "publicKeyBase58": "2MxJiNBTwDpRcPDYMzAJstEr4UNvbdixzs7YS1dkLhZ8"
+    }, 
+    {
+      "id": "did:web:anedpurp.github.io#u8uuCt7Yik",
+      "controller": "did:web:anedpurp.github.io",
+      "type": "Bls12381G2Key2020",
+      "publicKeyBase58": "u8uuCt7YikshGgmKozMm84T5ebnUdQ3yVhYLVcVUkJu4ryiHHngzDzoURbh2fqsiDLPeLJqSZzSKDHjUt5a6V5k7RTbzp1qsvSfsBqYmSGCJrp8T5sES4mePpbxBhM7mKCk"
     }
-  }
+  ], 
+  "keyAgreement": [
+    {
+      "id": "did:web:anedpurp.github.io#8uyPVpV2mq",
+      "controller": "did:web:anedpurp.github.io",
+      "type": "X25519KeyAgreementKey2019",
+      "publicKeyBase58": "8uyPVpV2mq6PgCSF3FLbkWfFyg1hyvptfKbnCUwu7cXx"
+    }
+  ]
 }
